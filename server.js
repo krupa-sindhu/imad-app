@@ -5,11 +5,12 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content={
-  title:'article-one|krupa',
-  heading:'article-one',
-  date:'september 5,2017',
-  content:`<p>
+var articles = {
+   article-ne' : {
+  title: 'article-one|krupa',
+  heading: 'article-one',
+  date: 'september 5,2017',
+  content:` <p>
             
             this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks 
         </p>
@@ -19,14 +20,68 @@ var content={
         </p>
         <p>
             this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks 
-        </p>`
+        </p>
+`
+},
+   articletwo :{
+     title: 'article-one|krupa',
+  heading: 'article-one',
+  date: 'september 5,2017',
+  content: <p>
+  2
+  </p>
+ },
+   articlethree : {
+     title: 'article-one|krupa',
+  heading: 'article-one',
+  date: 'september 5,2017',
+  content: <p>
+  3
+  </p>
+ }
+    
 };
 
+function createTemplate(data){
+    var title = data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+    
+var htmlTemplate = `
+ <html>
+    <head>
+         <title>
+         ${title}
+         </title>
+         <meta name="viewport" content="width=device-width, initial-case-1" />
+            <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <hr/>
+        <h3>
+            ${heading}
+        </h3>
+        <div>
+           $(date)
+        </div>
+        ${content}
+        </div>
+    </body>
+</html>
+`;
+return htmlTemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res){
-     res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+app.get('/:articleName',function(req,res){
+     res.send(createTemplate.articles[articleName]));
+     articleName = req.params.articleName;
 });
 app.get('/article-two',function(req,res){
  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));   
