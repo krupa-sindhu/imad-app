@@ -23,21 +23,21 @@ var articles = {
         </p>
 `
 },
-   'article-two' :{
+   'article-two' : {
      title: 'article-one|krupa',
   heading: 'article-one',
   date: 'september 5,2017',
-  content: <p>
+  content: `<p>
   2
-  </p>
+  </p>`
  },
    'article-three' : {
      title: 'article-one|krupa',
   heading: 'article-one',
   date: 'september 5,2017',
-  content: <p>
+  content:` <p>
   3
-  </p>
+  </p>`
  }
     
 };
