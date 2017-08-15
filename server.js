@@ -5,6 +5,23 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var content={
+  title:'article-one|krupa',
+  heading:'article-one',
+  date:'september 5,2017',
+  content:`<p>
+            
+            this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks 
+        </p>
+        <p>
+            this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks 
+
+        </p>
+        <p>
+            this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks this is the content that i am writing i am going to practice typing here i aguess i dont need any punctuation marks 
+        </p>`
+};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
