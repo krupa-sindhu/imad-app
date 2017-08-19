@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element=document.getElementById('main-text');
-element
+element;
 element.innerHTML='krupa!!!';
 var img=document.getElementById('madi');
 marginLeft=0;
@@ -11,7 +11,7 @@ function moveRight(){
 img.onclick=function(){
     var interval=setInterval(moveRight,50);
    // img.style.marginLeft='100px';
-}
+};
 
 var button=document.getElementById('counter');
 button.onclick=function(){
