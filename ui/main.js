@@ -1,7 +1,7 @@
 console.log('Loaded!');
 var element=document.getElementById('main-text');
 element
-element.innerHTML='akkkkshhu';
+element.innerHTML='krupa!!!';
 var img=document.getElementById('madi');
 marginLeft=0;
 function moveRight(){
