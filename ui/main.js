@@ -25,7 +25,7 @@ span.innerHTML=ctr.toString();
     }
     }
 };
-request.open('GET','http://akshathas513.imad.hasura-app.io/counter',true);
+request.open('GET','http://krps123450.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 var submit=document.getElementById('submit_btn');
@@ -48,7 +48,7 @@ submit.onclick=function(){
     };
     var nameInput=document.getElementById('name');
     var name=nameInput.value;
-    request.open('GET','http://akshathas513.imad.hasura-app.io/submit-name?name='+name,true);
+    request.open('GET','http://krps123450.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
 
   
