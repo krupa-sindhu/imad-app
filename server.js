@@ -96,7 +96,7 @@ app.get('/test-db',function(req,res){
          res.send(JSON.stringify(result.rows));
     });
 });
-app.get('/article/:articleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
       pool.query("SELECT * FROM TEST WHERE title= '" + req.params.articleName + "'" ,function(err,result)
       {if(err)
          res.status(500).send(err.toString());
