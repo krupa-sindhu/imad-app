@@ -18,7 +18,6 @@ submit.onclick=function(){
     var password =document.getElementById('password').value;
     console.log(username);
     console.log(password);
-    var name=nameInput.value;
     
     request.open('POST','http://krps123450.imad.hasura-app.io/login',true);
     request.setRequestHeader('content-type','application/json');
