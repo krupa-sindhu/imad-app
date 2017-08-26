@@ -84,8 +84,7 @@ pool.query('SELECT * from "user" WHERE username=$1',[username],function(err,resu
         if(err){
             res.status(500).send(err.toString());
         }
-        else{
-            if(result.rows.length===0)
+        else if(result.rows.length===0)
             {
                res.send(403).send('Invalid Username/Password');
             }
@@ -102,7 +101,7 @@ pool.query('SELECT * from "user" WHERE username=$1',[username],function(err,resu
                 res.send(403).send('Invalid Password!');
             }
             } 
-        }
+        
     });
 });
 
