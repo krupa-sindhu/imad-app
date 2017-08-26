@@ -66,7 +66,7 @@ var username=req.body.username;
 var password=req.body.password;
 var salt=crypto.randomBytes(128).toString('hex');
 var dbString=hash(password,salt);
-pool.query('INSERT INTO "user" (username,password) values($1,$2)',[username,dbString],function(err,result){
+pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)',[username,dbString],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
