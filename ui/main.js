@@ -8,20 +8,20 @@ submit.onclick=function(){
         console.log('user logged in');
         alert('logged in sucessfully');
     }else if(request.status===403){
-       alert('password is incorrect');
+       alert('username/password is incorrect');
     }else if(request.status===500){
         alert('something went wrong on the server');
     }
     }
     };
-    var username=document.getElementById('username').value;
-    var password =document.getElementById('password').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
     console.log(username);
     console.log(password);
     
     request.open('POST','http://krps123450.imad.hasura-app.io/login',true);
     request.setRequestHeader('content-type','application/json');
-    request.send(JSON.stringify({username:username,password:password}));
+    request.send(JSON.stringify({username: username, password: password}));
 
   
 };
